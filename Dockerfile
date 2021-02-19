@@ -1,5 +1,5 @@
 FROM ubuntu:groovy
-LABEL maintainer "AnggaR96s <angga@linuxmail.org>"
+LABEL maintainer "IrhamFadzillah <irham8381@gmail.com>"
 
 RUN ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 RUN apt update && apt -y upgrade && apt install -y tzdata locales
@@ -144,7 +144,7 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
-# Install apt for WeebProject
+# Install apt for Yama
 RUN apt-get -qq update && apt-get -qq install -y \
     apt-utils \
     aria2 \
@@ -183,6 +183,6 @@ RUN wget -N https://chromedriver.storage.googleapis.com/87.0.4280.20/chromedrive
     chmod 0755 /usr/bin/chromedriver
 
 # Install python requirements
-RUN pip3 install -r https://raw.githubusercontent.com/BianSepang/WeebProject/staging/requirements.txt
+RUN pip3 install -r https://raw.githubusercontent.com/IrhamFadzillah/Yama/x-sql-extended/requirements.txt
 
 CMD ["bash"]
